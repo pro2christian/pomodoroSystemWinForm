@@ -28,84 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
+            components = new System.ComponentModel.Container();
+            buttonPadrao = new Button();
+            buttonPersonalizado = new Button();
             checkBox1 = new CheckBox();
-            button3 = new Button();
-            labelCornometro = new Label();
-            button4 = new Button();
+            buttonIniciar = new Button();
+            buttonParar = new Button();
             txt_temporizador = new TextBox();
+            buttonResert = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
+            labelCronometro = new Label();
             SuspendLayout();
             // 
-            // button1
+            // buttonPadrao
             // 
-            button1.Location = new Point(121, 180);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 21);
-            button1.TabIndex = 2;
-            button1.Text = "Padrão";
-            button1.UseVisualStyleBackColor = true;
+            buttonPadrao.Location = new Point(95, 168);
+            buttonPadrao.Name = "buttonPadrao";
+            buttonPadrao.Size = new Size(75, 21);
+            buttonPadrao.TabIndex = 2;
+            buttonPadrao.Text = "Padrão";
+            buttonPadrao.UseVisualStyleBackColor = true;
+            buttonPadrao.Visible = false;
             // 
-            // button2
+            // buttonPersonalizado
             // 
-            button2.Location = new Point(202, 180);
-            button2.Name = "button2";
-            button2.Size = new Size(96, 21);
-            button2.TabIndex = 3;
-            button2.Text = "Personalizado";
-            button2.UseVisualStyleBackColor = true;
+            buttonPersonalizado.Location = new Point(176, 168);
+            buttonPersonalizado.Name = "buttonPersonalizado";
+            buttonPersonalizado.Size = new Size(96, 21);
+            buttonPersonalizado.TabIndex = 3;
+            buttonPersonalizado.Text = "Personalizado";
+            buttonPersonalizado.UseVisualStyleBackColor = true;
+            buttonPersonalizado.Visible = false;
             // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(147, 212);
+            checkBox1.Location = new Point(121, 200);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(133, 19);
             checkBox1.TabIndex = 4;
             checkBox1.Text = "Mostrar cronômetro";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.Visible = false;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
-            // button3
+            // buttonIniciar
             // 
-            button3.BackColor = Color.Green;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(121, 110);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 33);
-            button3.TabIndex = 0;
-            button3.Text = "Iniciar";
-            button3.UseVisualStyleBackColor = false;
+            buttonIniciar.BackColor = Color.Green;
+            buttonIniciar.FlatAppearance.BorderSize = 0;
+            buttonIniciar.FlatAppearance.MouseDownBackColor = Color.Lime;
+            buttonIniciar.FlatStyle = FlatStyle.Flat;
+            buttonIniciar.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonIniciar.ForeColor = Color.White;
+            buttonIniciar.Location = new Point(95, 98);
+            buttonIniciar.Name = "buttonIniciar";
+            buttonIniciar.Size = new Size(75, 33);
+            buttonIniciar.TabIndex = 0;
+            buttonIniciar.Text = "Iniciar";
+            buttonIniciar.UseVisualStyleBackColor = false;
+            buttonIniciar.Click += buttonIniciar_Click;
             // 
-            // labelCornometro
+            // buttonParar
             // 
-            labelCornometro.AutoSize = true;
-            labelCornometro.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCornometro.Location = new Point(76, 9);
-            labelCornometro.Name = "labelCornometro";
-            labelCornometro.Size = new Size(275, 86);
-            labelCornometro.TabIndex = 5;
-            labelCornometro.Text = "11:11:11";
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.Red;
-            button4.FlatAppearance.BorderColor = Color.Black;
-            button4.FlatAppearance.MouseDownBackColor = Color.OrangeRed;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(223, 110);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 33);
-            button4.TabIndex = 1;
-            button4.Text = "Parar";
-            button4.UseVisualStyleBackColor = false;
+            buttonParar.BackColor = Color.Red;
+            buttonParar.FlatAppearance.BorderSize = 0;
+            buttonParar.FlatAppearance.MouseDownBackColor = Color.Salmon;
+            buttonParar.FlatStyle = FlatStyle.Flat;
+            buttonParar.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonParar.ForeColor = Color.White;
+            buttonParar.Location = new Point(197, 99);
+            buttonParar.Name = "buttonParar";
+            buttonParar.Size = new Size(75, 33);
+            buttonParar.TabIndex = 1;
+            buttonParar.Text = "Pausar";
+            buttonParar.UseVisualStyleBackColor = false;
+            buttonParar.Click += buttonParar_Click;
             // 
             // txt_temporizador
             // 
             txt_temporizador.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            txt_temporizador.Location = new Point(120, 150);
+            txt_temporizador.Location = new Point(94, 138);
             txt_temporizador.Name = "txt_temporizador";
             txt_temporizador.Size = new Size(178, 25);
             txt_temporizador.TabIndex = 6;
@@ -113,18 +115,50 @@
             txt_temporizador.TextAlign = HorizontalAlignment.Center;
             txt_temporizador.Visible = false;
             // 
+            // buttonResert
+            // 
+            buttonResert.BackColor = Color.Yellow;
+            buttonResert.FlatAppearance.BorderSize = 0;
+            buttonResert.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 192, 0);
+            buttonResert.FlatStyle = FlatStyle.Flat;
+            buttonResert.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonResert.Location = new Point(95, 97);
+            buttonResert.Name = "buttonResert";
+            buttonResert.Size = new Size(75, 34);
+            buttonResert.TabIndex = 7;
+            buttonResert.Text = "Resetar";
+            buttonResert.UseVisualStyleBackColor = false;
+            buttonResert.Visible = false;
+            buttonResert.Click += buttonResert_Click;
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Tick += timer1_Tick;
+            // 
+            // labelCronometro
+            // 
+            labelCronometro.AutoSize = true;
+            labelCronometro.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            labelCronometro.Location = new Point(48, 8);
+            labelCronometro.Name = "labelCronometro";
+            labelCronometro.Size = new Size(275, 86);
+            labelCronometro.TabIndex = 8;
+            labelCronometro.Text = "00:00:00";
+            // 
             // telaInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(415, 249);
+            ClientSize = new Size(368, 249);
+            Controls.Add(labelCronometro);
+            Controls.Add(buttonResert);
             Controls.Add(txt_temporizador);
-            Controls.Add(button4);
-            Controls.Add(labelCornometro);
-            Controls.Add(button3);
+            Controls.Add(buttonParar);
+            Controls.Add(buttonIniciar);
             Controls.Add(checkBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(buttonPersonalizado);
+            Controls.Add(buttonPadrao);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "telaInicio";
@@ -136,12 +170,14 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
+        private Button buttonPadrao;
+        private Button buttonPersonalizado;
         private CheckBox checkBox1;
-        private Button button3;
-        private Label labelCornometro;
-        private Button button4;
+        private Button buttonIniciar;
+        private Button buttonParar;
         private TextBox txt_temporizador;
+        private Button buttonResert;
+        private System.Windows.Forms.Timer timer1;
+        private Label labelCronometro;
     }
 }
