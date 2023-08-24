@@ -21,7 +21,7 @@ namespace Pomodoro
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            //em desenvolvimento
         }
 
         private void buttonParar_Click(object sender, EventArgs e)
