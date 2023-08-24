@@ -84,7 +84,7 @@ namespace Pomodoro
             {
                 stopwatch.Stop();
                 timer1.Stop();
-                MessageBox.Show("Tire sua pausa!!","Pausa",
+                MessageBox.Show("Tire sua pausa!!", "Pausa",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                 buttonParar.Visible = false;
@@ -94,14 +94,14 @@ namespace Pomodoro
                 validacao = true;
             }//em pausa...
             else if (alerta.TotalSeconds >= 3 && validacao == true)
-            {                
+            {
                 stopwatch.Stop();
                 timer1.Stop();
                 MessageBox.Show("Voltar às atividades!!", "Pausa",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Warning);
-                buttonIniciar.Visible = true;                             
-            }        
+                buttonIniciar.Visible = true;
+            }
         }
 
         //registra na lista de atividades a pausa

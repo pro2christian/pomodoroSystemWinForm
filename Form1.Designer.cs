@@ -210,7 +210,7 @@
             MaximizeBox = false;
             Name = "telaInicio";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Pomodoro";
+            Text = "Pomodoro System";
             ResumeLayout(false);
             PerformLayout();
         }
