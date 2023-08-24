@@ -147,7 +147,7 @@
             labelCronometro.Name = "labelCronometro";
             labelCronometro.Size = new Size(275, 86);
             labelCronometro.TabIndex = 8;
-            labelCronometro.Text = "00:00:00";
+            labelCronometro.Text = "00:00,00";
             // 
             // listRegisto
             // 
