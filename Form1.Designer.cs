@@ -45,7 +45,7 @@
             // 
             // buttonPadrao
             // 
-            buttonPadrao.Location = new Point(95, 187);
+            buttonPadrao.Location = new Point(95, 192);
             buttonPadrao.Name = "buttonPadrao";
             buttonPadrao.Size = new Size(75, 21);
             buttonPadrao.TabIndex = 2;
@@ -55,7 +55,7 @@
             // 
             // buttonPersonalizado
             // 
-            buttonPersonalizado.Location = new Point(176, 187);
+            buttonPersonalizado.Location = new Point(176, 192);
             buttonPersonalizado.Name = "buttonPersonalizado";
             buttonPersonalizado.Size = new Size(96, 21);
             buttonPersonalizado.TabIndex = 3;
@@ -66,7 +66,7 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(121, 219);
+            checkBox1.Location = new Point(121, 223);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(133, 19);
             checkBox1.TabIndex = 4;
@@ -83,7 +83,7 @@
             buttonIniciar.FlatStyle = FlatStyle.Flat;
             buttonIniciar.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonIniciar.ForeColor = Color.White;
-            buttonIniciar.Location = new Point(48, 99);
+            buttonIniciar.Location = new Point(54, 109);
             buttonIniciar.Name = "buttonIniciar";
             buttonIniciar.Size = new Size(75, 33);
             buttonIniciar.TabIndex = 0;
@@ -99,7 +99,7 @@
             buttonParar.FlatStyle = FlatStyle.Flat;
             buttonParar.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonParar.ForeColor = Color.White;
-            buttonParar.Location = new Point(248, 99);
+            buttonParar.Location = new Point(254, 109);
             buttonParar.Name = "buttonParar";
             buttonParar.Size = new Size(75, 33);
             buttonParar.TabIndex = 1;
@@ -110,7 +110,7 @@
             // txt_temporizador
             // 
             txt_temporizador.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            txt_temporizador.Location = new Point(94, 157);
+            txt_temporizador.Location = new Point(94, 162);
             txt_temporizador.Name = "txt_temporizador";
             txt_temporizador.Size = new Size(178, 25);
             txt_temporizador.TabIndex = 6;
@@ -125,7 +125,7 @@
             buttonResert.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 192, 0);
             buttonResert.FlatStyle = FlatStyle.Flat;
             buttonResert.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonResert.Location = new Point(148, 99);
+            buttonResert.Location = new Point(154, 109);
             buttonResert.Name = "buttonResert";
             buttonResert.Size = new Size(75, 34);
             buttonResert.TabIndex = 7;
@@ -142,12 +142,14 @@
             // labelCronometro
             // 
             labelCronometro.AutoSize = true;
+            labelCronometro.BorderStyle = BorderStyle.Fixed3D;
+            labelCronometro.Cursor = Cursors.No;
             labelCronometro.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCronometro.Location = new Point(48, 8);
+            labelCronometro.Location = new Point(94, 8);
             labelCronometro.Name = "labelCronometro";
-            labelCronometro.Size = new Size(275, 86);
+            labelCronometro.Size = new Size(193, 88);
             labelCronometro.TabIndex = 8;
-            labelCronometro.Text = "00:00,00";
+            labelCronometro.Text = "00:00";
             // 
             // listRegisto
             // 
@@ -165,9 +167,9 @@
             buttonregPausa.FlatAppearance.MouseDownBackColor = Color.Cyan;
             buttonregPausa.FlatStyle = FlatStyle.Flat;
             buttonregPausa.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonregPausa.Location = new Point(48, 97);
+            buttonregPausa.Location = new Point(134, 109);
             buttonregPausa.Name = "buttonregPausa";
-            buttonregPausa.Size = new Size(75, 44);
+            buttonregPausa.Size = new Size(111, 34);
             buttonregPausa.TabIndex = 10;
             buttonregPausa.Text = "Registrar pausa?";
             buttonregPausa.UseVisualStyleBackColor = false;
@@ -181,7 +183,7 @@
             buttonContinuar.FlatAppearance.MouseDownBackColor = Color.Yellow;
             buttonContinuar.FlatStyle = FlatStyle.Flat;
             buttonContinuar.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonContinuar.Location = new Point(139, 99);
+            buttonContinuar.Location = new Point(145, 109);
             buttonContinuar.Name = "buttonContinuar";
             buttonContinuar.Size = new Size(94, 34);
             buttonContinuar.TabIndex = 11;
